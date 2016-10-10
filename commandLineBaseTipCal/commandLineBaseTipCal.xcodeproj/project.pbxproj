@@ -10,6 +10,8 @@
 		44C357A11DABD92E0073AED3 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C357A01DABD92E0073AED3 /* main.swift */; };
 		44C357A81DABDB7B0073AED3 /* interactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C357A71DABDB7B0073AED3 /* interactive.swift */; };
 		44C357AA1DABE57F0073AED3 /* io.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C357A91DABE57F0073AED3 /* io.swift */; };
+		44C357AC1DAC04C20073AED3 /* calacution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C357AB1DAC04C20073AED3 /* calacution.swift */; };
+		44C357AE1DAC1F100073AED3 /* taxamount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C357AD1DAC1F100073AED3 /* taxamount.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +31,8 @@
 		44C357A01DABD92E0073AED3 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		44C357A71DABDB7B0073AED3 /* interactive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = interactive.swift; sourceTree = "<group>"; };
 		44C357A91DABE57F0073AED3 /* io.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = io.swift; sourceTree = "<group>"; };
+		44C357AB1DAC04C20073AED3 /* calacution.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = calacution.swift; sourceTree = "<group>"; };
+		44C357AD1DAC1F100073AED3 /* taxamount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = taxamount.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,8 @@
 				44C357A01DABD92E0073AED3 /* main.swift */,
 				44C357A71DABDB7B0073AED3 /* interactive.swift */,
 				44C357A91DABE57F0073AED3 /* io.swift */,
+				44C357AB1DAC04C20073AED3 /* calacution.swift */,
+				44C357AD1DAC1F100073AED3 /* taxamount.swift */,
 			);
 			path = commandLineBaseTipCal;
 			sourceTree = "<group>";
@@ -127,7 +133,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				44C357A81DABDB7B0073AED3 /* interactive.swift in Sources */,
+				44C357AE1DAC1F100073AED3 /* taxamount.swift in Sources */,
 				44C357AA1DABE57F0073AED3 /* io.swift in Sources */,
+				44C357AC1DAC04C20073AED3 /* calacution.swift in Sources */,
 				44C357A11DABD92E0073AED3 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

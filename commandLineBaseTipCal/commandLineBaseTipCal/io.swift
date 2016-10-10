@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Io{
+class Io {
     func getInput() -> String {
         let keyboard = FileHandle.standardInput
         let inputData = keyboard.availableData

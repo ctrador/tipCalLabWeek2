@@ -8,11 +8,17 @@
 
 import Foundation
 
-let interactive = Interactive()
+let billAmount = BillAmount()
 
 //run in interactive mode
 
-interactive.go()
+billAmount.go()
+
+billAmount.tax()
+
+billAmount.tip()
+
+billAmount.party()
 
 exit(EXIT_SUCCESS)
 
