@@ -8,5 +8,14 @@
 
 import Foundation
 
-print("Hello, World!")
+let interactive = Interactive()
+
+//run in interactive mode
+
+interactive.go()
+
+exit(EXIT_SUCCESS)
+
+
+
 
