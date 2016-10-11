@@ -11,14 +11,19 @@ import Foundation
 let billAmount = BillAmount()
 
 //run in interactive mode
+billAmount.Menu()
 
-billAmount.bill()
+//billAmount.bill()
 
-billAmount.tax()
+//billAmount.tax()
 
-billAmount.tip()
+//billAmount.taxCal()
 
-billAmount.party()
+//billAmount.tip()
+
+//billAmount.taxCal()
+
+//billAmount.party()
 
 exit(EXIT_SUCCESS)
 
