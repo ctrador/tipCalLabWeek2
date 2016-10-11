@@ -17,7 +17,7 @@ class BillAmount{
     private var tipInput: String = ""
     private var partyInput: String = ""
     
-    func go() {
+    func bill() {
         
         while !done {
             // ask user for input right here.
@@ -29,7 +29,7 @@ class BillAmount{
             } else {
                 print("The Bill Amount is: \(currentInput)")
                 
-                return tax()
+                return billAmount.tax()
             }
         }
         print ("Exiting.....")
@@ -47,7 +47,8 @@ class BillAmount{
                     done = true
                 } else {
                     print("The Tax Amount is: \(taxInput)")
-                    return tip()
+                    //return tip()
+                    return taxCal()
  
             }
                 
@@ -56,7 +57,42 @@ class BillAmount{
             
             return
         }
+    
+    func tipcal() {
+        while !done {
+            
+         
+        }
+    }
+    
+    func taxCal(){
+      // var billamt: Double? = Double(String)
+        //var Taxamt: Double? = Double(String)
+        //var  taxCalc = billatm * TaxAmt
         
+        while !done {
+           // io.writeMessage("\n Tax Amount is \(taxCalc)")
+           // taxCal = io.getInput()
+            
+            if currentInput == "q"{
+                done = true
+                
+           // }if else currentInput == "t"{
+                
+          //        = 0
+            
+            }else {
+           //     print("The tax ammount is: \(taxCalc)")
+                return tip()
+            }
+        }
+        
+    
+    
+    }
+    
+    
+    
     func tip() {
         
         while !done {
@@ -68,16 +104,51 @@ class BillAmount{
                 done = true
             } else {
                 print("The Tip Amount is: \(tipInput)")
-                return party()
+                return tipCal()
                 
             }
         }
         print ("Exiting.....")
         
-        return billAmount.go()
+        return billAmount.bill()
     }
     
     
+    func tipCal(){
+        // var billamt: Double? = Double(String)
+        //var Tipamt: Double? = Double(String)
+        //var  tipCalc = billatm * TipAmt
+        
+        while !done {
+            // io.writeMessage("\n Tax Amount is \(tipCalc)")
+            // tipCal = io.getInput()
+            
+            if currentInput == "q"{
+                done = true
+                
+                // }if else currentInput == "t"{
+                
+                //        = 0
+                
+            }else {
+                //     print("The tax ammount is: \(taxCalc)")
+                return party()
+            }
+            print ("Exiting.....")
+            
+            return billAmount.bill()
+        }
+
+        
+        
+        
+    
+    print ("Exiting.....")
+    
+    return billAmount.bill()
+}
+
+
     func party() {
         
         while !done {
@@ -90,10 +161,11 @@ class BillAmount{
             } else {
                 print("The Number in party is: \(partyInput)")
             }
+            
         }
         print ("Exiting.....")
         
-        return billAmount.go()
+        return billAmount.bill()
     }
     
     

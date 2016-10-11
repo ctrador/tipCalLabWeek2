@@ -9,14 +9,15 @@
 import Foundation
 
 class calacution {
-    var billWithoutTaxOrTip = billAmount    
-    var taxPercent = 0.09
-    var tipPrecentage = 0.20
-    var numberOfPeopleInParty = 2.0
+    var billWithoutTaxOrTip = billAmount.bill
+    var taxPercent = billAmount.tax
+    var tipPrecentage = billAmount.tip
+    var numberOfPeopleInParty = billAmount.party
+    
     
     func Calculations(){
         
-      //  let taxAmount = billWithoutTaxOrTip * taxPercent
+       // let taxAmount: Double = (Double billWithoutTaxOrTip (String) *  taxPercent (String))
         
       //  let billWithTax = billWithoutTaxOrTip + taxAmount
         

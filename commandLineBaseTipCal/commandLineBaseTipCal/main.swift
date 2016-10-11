@@ -12,7 +12,7 @@ let billAmount = BillAmount()
 
 //run in interactive mode
 
-billAmount.go()
+billAmount.bill()
 
 billAmount.tax()
 
