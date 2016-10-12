@@ -16,20 +16,20 @@ class BillAmount{
     
     private var io = Io()
     
-    private var taxInput: Double = 0.0
+   // private var taxInput: Double = 0.0
     
-    private var tipInput: Double = 0.0
+   // private var tipInput: Double = 0.0
     
-    private var partyInput: Double = 0.0
+    //private var partyInput: Double = 0.0
     
-    var billInput: Double = 0.0
+   // var billInput: Double = 0.0
     
     func Menu() {
         
         while !done {
             
             // ask user for input right here.
-            io.writeMessage("\n To Start For Bill Calculation Type t!\n if you need help type help \n")
+            io.writeMessage("\n To Start For Bill Calculation Type t\n if you need help type help \n")
             currentInput = io.getInput()
             
             if currentInput == "q" {
@@ -39,7 +39,7 @@ class BillAmount{
             } else if currentInput == "t" {
                 // send to calacution menu
                 
-                return billAmount.bill()
+                return cal()
                 
             } else if currentInput == "help" {
                 io.writeMessage("\n to get first Question type n\n to calculate tip type t\nto quit type q")
@@ -47,7 +47,7 @@ class BillAmount{
                // print("The Bill Amount is: \(currentInput)")
            // let billInput: Double? = Double(currentInput)
                 //  io.writeMessage("\n this is bill input\n\(billInput)")
-                return billAmount.bill()
+                return cal()
             
             }
             
@@ -58,7 +58,7 @@ class BillAmount{
     }
     
     
-    func bill() {
+   /* func bill() {
         
         while !done {
         
@@ -104,7 +104,7 @@ class BillAmount{
                 currentInput = io.getInput()
                
                let taxInput = Double(currentInput) ?? 0.00
-                let taxAmt: Double? = ((tipInput ?? 0.00) / 100)
+                let taxAmt: Double? = ((taxInput ?? 0.00) / 100)
 
                 if currentInput == "q" {
                     done = true
@@ -284,17 +284,52 @@ class BillAmount{
    // private var partyInput: Double = 0.0
     
     //varname = double(currentInput) ?? 0.00
-
+//keeper math print*/
     func cal(){
-       let billWithTax = (billInput * taxInput)
-        let tipTotal = (billInput * tipInput)
-        let billWithTaxAndTIP = (billWithTax + tipTotal)
-        let billSpiltTotal = (billWithTaxAndTIP / partyInput)
+        io.writeMessage("\nBill Amount?")
+        currentInput = io.getInput()
         
-        print("bill amount is:\(billInput)")
-        print("bill with tax amount is:\(taxInput)")
-        print("tip amount is:\(tipTotal)")
-        print("split amount is:\(billSpiltTotal)")
+        //billInput constant
+        let billInput: Double? = Double(currentInput)
+          print("The Bill Amount is: \(billInput)")
+       
+        io.writeMessage("\nTax Amount?")
+        currentInput = io.getInput()
+        
+        let taxInput = Double(currentInput) ?? 0.00
+        let taxAmt: Double? = ((taxInput ?? 0.00) / 10)
+
+        print("The Tax Amount is: \(taxInput)")
+        
+        io.writeMessage("\nTip Amount?")
+        currentInput = io.getInput()
+        
+        // set tipInput constant
+        let tipInput: Double? = Double(currentInput)
+        let tipAmt: Double? = ((tipInput ?? 0.00) / 100)
+        
+ print("The Tip Amount is: \(tipAmt)")
+        
+        io.writeMessage("\nNumber In Party?")
+        currentInput = io.getInput()
+        // set partyinput constant
+        let partyInput: Double? = Double(currentInput)
+        
+         print("The Number in party is: \(partyInput)")
+        
+        
+        
+       let billWithTax = (billInput! + taxAmt!)
+        let tipTotal = (billInput! * (tipInput! * 0.01))
+        let billWithTaxAndTIP = (billWithTax + tipAmt!)
+        let billSpiltTotal = (billWithTaxAndTIP / partyInput!)
+        
+        print("bill amount is:\n\(billInput)")
+        print("tax on bill is:\n\(taxAmt)")
+        print("tip amount is:\n\(tipTotal)")
+        print("bill total with tax is:\n\(billWithTax)")
+        print("bill total with tax and tip is:\n\(billWithTaxAndTIP)")
+        print("split amount is:\n\(billSpiltTotal)")
     
     }
     

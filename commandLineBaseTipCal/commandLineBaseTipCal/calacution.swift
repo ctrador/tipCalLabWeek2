@@ -6,7 +6,9 @@
 //  Copyright © 2016 Chad Trador. All rights reserved.
 //
 
-//import Foundation
+import Foundation
+
+
 
   // class calacution {
  //   var billWithoutTaxOrTip = billAmount.bill
