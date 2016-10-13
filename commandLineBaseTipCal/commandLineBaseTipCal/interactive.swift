@@ -39,7 +39,7 @@ class BillAmount{
             } else if currentInput == "t" {
                 // send to calacution menu
                 
-                return cal()
+                cal()
                 
             } else if currentInput == "help" {
                 io.writeMessage("\n to get first Question type n\n to calculate tip type t\nto quit type q")
@@ -47,9 +47,12 @@ class BillAmount{
                // print("The Bill Amount is: \(currentInput)")
            // let billInput: Double? = Double(currentInput)
                 //  io.writeMessage("\n this is bill input\n\(billInput)")
-                return cal()
+                cal()
             
+            }else {
+                print("The only responces are help for help menu; t for program; q for Quit;  \(currentInput)  is not an option")
             }
+
             
         }
         print ("Exiting.....")
@@ -291,15 +294,15 @@ class BillAmount{
         
         //billInput constant
         let billInput: Double? = Double(currentInput)
-          print("The Bill Amount is: \(billInput)")
+         // print("The Bill Amount is: \(billInput)")
        
-        io.writeMessage("\nTax Amount?")
-        currentInput = io.getInput()
+        //io.writeMessage("\nTax Amount?")
+        //currentInput = io.getInput()
         
-        let taxInput = Double(currentInput) ?? 0.00
-        let taxAmt: Double? = ((taxInput ?? 0.00) / 10)
+        //let taxInput = Double(currentInput) ?? 0.00
+       // let taxAmt: Double? = ((taxInput ?? 0.00) / 10)
 
-        print("The Tax Amount is: \(taxInput)")
+        //print("The Tax Amount is: \(taxInput)")
         
         io.writeMessage("\nTip Amount?")
         currentInput = io.getInput()
@@ -308,29 +311,30 @@ class BillAmount{
         let tipInput: Double? = Double(currentInput)
         let tipAmt: Double? = ((tipInput ?? 0.00) / 100)
         
- print("The Tip Amount is: \(tipAmt)")
+        //print("The Tip Amount is: \(tipAmt)")
         
         io.writeMessage("\nNumber In Party?")
         currentInput = io.getInput()
+        
         // set partyinput constant
         let partyInput: Double? = Double(currentInput)
         
-         print("The Number in party is: \(partyInput)")
+        print("The Number in party is: \(partyInput)")
         
-        
-        
-       let billWithTax = (billInput! + taxAmt!)
+        let taxAmount = (billInput! * 0.06)
+        let billWithTax = (billInput! + taxAmount)
         let tipTotal = (billInput! * (tipInput! * 0.01))
-        let billWithTaxAndTIP = (billWithTax + tipAmt!)
+        let billWithTaxAndTIP = (billWithTax + (tipAmt! * 100.00))
         let billSpiltTotal = (billWithTaxAndTIP / partyInput!)
         
+        
         print("bill amount is:\n\(billInput)")
-        print("tax on bill is:\n\(taxAmt)")
+        print("tax amount is:\n \(taxAmount)")
+        //print("tax on bill is:\n\(billInput! * 0.06)")
         print("tip amount is:\n\(tipTotal)")
         print("bill total with tax is:\n\(billWithTax)")
         print("bill total with tax and tip is:\n\(billWithTaxAndTIP)")
         print("split amount is:\n\(billSpiltTotal)")
-    
     }
     
     

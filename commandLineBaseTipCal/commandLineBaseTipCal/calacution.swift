@@ -8,9 +8,63 @@
 
 import Foundation
 
+/*
 
+   class calacution {
 
-  // class calacution {
+    func cal(){
+        io.writeMessage("\nBill Amount?")
+        currentInput = io.getInput()
+        
+        //billInput constant
+        let billInput: Double? = Double(currentInput)
+        print("The Bill Amount is: \(billInput)")
+        
+        io.writeMessage("\nTax Amount?")
+        currentInput = io.getInput()
+        
+        let taxInput = Double(currentInput) ?? 0.00
+        let taxAmt: Double? = ((taxInput ?? 0.00) / 10)
+        
+        print("The Tax Amount is: \(taxInput)")
+        
+        io.writeMessage("\nTip Amount?")
+        currentInput = io.getInput()
+        
+        // set tipInput constant
+        let tipInput: Double? = Double(currentInput)
+        let tipAmt: Double? = ((tipInput ?? 0.00) / 100)
+        
+        print("The Tip Amount is: \(tipAmt)")
+        
+        io.writeMessage("\nNumber In Party?")
+        currentInput = io.getInput()
+        // set partyinput constant
+        let partyInput: Double? = Double(currentInput)
+        
+        print("The Number in party is: \(partyInput)")
+        
+        
+        
+        let billWithTax = (billInput! + taxAmt!)
+        let tipTotal = (billInput! * (tipInput! * 0.01))
+        let billWithTaxAndTIP = (billWithTax + tipAmt!)
+        let billSpiltTotal = (billWithTaxAndTIP / partyInput!)
+        
+        print("bill amount is:\n\(billInput)")
+        print("tax on bill is:\n\(taxAmt)")
+        print("tip amount is:\n\(tipTotal)")
+        print("bill total with tax is:\n\(billWithTax)")
+        print("bill total with tax and tip is:\n\(billWithTaxAndTIP)")
+        print("split amount is:\n\(billSpiltTotal)")
+        
+        
+        
+    }
+    
+    
+    
+}
  //   var billWithoutTaxOrTip = billAmount.bill
  //   var taxPercent = billAmount.tax
  //   var tipPrecentage = billAmount.tip
@@ -34,4 +88,4 @@ import Foundation
     
     
 
-
+*/
