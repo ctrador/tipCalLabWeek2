@@ -10,6 +10,8 @@ import Foundation
 
 class BillAmount{
     
+    var calacution = Calacution()
+    
     private var done: Bool = false
     
     private var currentInput: String = "q"
@@ -29,28 +31,28 @@ class BillAmount{
         while !done {
             
             // ask user for input right here.
-            io.writeMessage("\n To Start For Bill Calculation Type t\n if you need help type help \n")
+            io.writeMessage("\n To Start For Bill Calculation Type: calculate tip\n if you need help type help \n to quit type: quit")
             currentInput = io.getInput()
             
-            if currentInput == "q" {
+            if currentInput == "quit" {
                 done = true
 //varname = double(currentInput) ?? 0.00
             
-            } else if currentInput == "t" {
+            } else if currentInput == "calculate tip" {
                 // send to calacution menu
                 
                 cal()
                 
             } else if currentInput == "help" {
-                io.writeMessage("\n to get first Question type n\n to calculate tip type t\nto quit type q")
+                io.writeMessage("\n  to calculate tip type calculate tip\nto quit type quit")
                 
                // print("The Bill Amount is: \(currentInput)")
            // let billInput: Double? = Double(currentInput)
                 //  io.writeMessage("\n this is bill input\n\(billInput)")
-                cal()
+            
             
             }else {
-                print("The only responces are help for help menu; t for program; q for Quit;  \(currentInput)  is not an option")
+                print("The only responces are help for help menu; calculate tip for program; quit for Quit;  \(currentInput)  is not an option")
             }
 
             
@@ -319,22 +321,44 @@ class BillAmount{
         // set partyinput constant
         let partyInput: Double? = Double(currentInput)
         
-        print("The Number in party is: \(partyInput)")
+        //print("The Number in party is: \(partyInput)")
+        //var number = 5.1517
+        
+       // var intNumber = Int(number * 10.0)
+        
+        //var roundedNumber = Double(intNumber) / 10.0
         
         let taxAmount = (billInput! * 0.06)
+      
+        let roundedTaxAmmount = round(100 * taxAmount) / 100
+        
         let billWithTax = (billInput! + taxAmount)
+        
+        let roundedBillwithTax = round(100 * billWithTax) / 100
+        
         let tipTotal = (billInput! * (tipInput! * 0.01))
-        let billWithTaxAndTIP = (billWithTax + (tipAmt! * 100.00))
+        
+        let roundedTipTotal = round(100 * tipTotal) / 100
+        
+        var billWithTaxAndTIP = (billWithTax + tipTotal)
+        
+        let roundedBillWithTaxAndTip = round(100 * billWithTaxAndTIP) / 100
+        
+        var BillWithTaxAndTipRounded = round(100 * billWithTaxAndTIP) / 100
+        
         let billSpiltTotal = (billWithTaxAndTIP / partyInput!)
         
+        let roundedBillSpilt = round(100 * billSpiltTotal) / 100
         
-        print("bill amount is:\n\(billInput)")
-        print("tax amount is:\n \(taxAmount)")
+       // let roundedTipTotal = Double(taxAmount) / 10.00
+        
+        //print("bill amount is:\n\(billInput)")
+        print("tax amount is:\n \(roundedTaxAmmount)")
         //print("tax on bill is:\n\(billInput! * 0.06)")
-        print("tip amount is:\n\(tipTotal)")
-        print("bill total with tax is:\n\(billWithTax)")
-        print("bill total with tax and tip is:\n\(billWithTaxAndTIP)")
-        print("split amount is:\n\(billSpiltTotal)")
+        print("tip amount is:\n\(roundedTipTotal)")
+        print("bill total with tax is:\n\(roundedBillwithTax)")
+        print("bill total with tax and tip is:\n\(BillWithTaxAndTipRounded)")
+        print("split amount is:\n\(roundedBillSpilt)")
     }
     
     
